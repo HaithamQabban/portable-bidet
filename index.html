@@ -20,34 +20,57 @@
         </section>
         <div class="gallery">
         <section class="product" id="product">
-            <div class="slider">
-                <button class="slider_button prev">Previous</button>
-                <div class="slider_track">
-                    <img src="img/portablebidet(2).png" alt="Portable Bidet">
-                    <img src="img\portable_bidetnobackround.png">
+            <div class="gallery">
+                <div class="slider">
+                    <button class="slider_button prev" aria-label="Previous image">←</button>
+                    <div class="slider_track">
+                        <img src="img/portablebidet(2).png" alt="Portable Bidet">
+                        <img src="img/portable_bidetnobackround.png" alt="Portable Bidet">
+                    </div>
+                    <button class="slider_button next" aria-label="Next image">→</button>
                 </div>
-                <button class="slider_button next">Next</button>
+                <div class="thumbnails">
+                    <button class="thumb active" aria-label="Show image1">
+                        <img src="img/portablebidet(2).png" alt="Thumbnail 1">
+                    </button>
+                    <button class="thumb" aria-label="Show image2">
+                        <img src="img/portable_bidetnobackround.png" alt="Thumbnail 2">
+                    </button>
+                </div>
             </div>
-            <div class="thumbnails">
-                <button class="thumb active" aria-label="Show image1">
-                    <img src="img/portablebidet(2).png" alt="Thumbnail 1">
-                </button>
-                <button class="thumb" aria-label="Show image2">
-                    <img src="img/portable_bidetnobackround.png" alt="Thumbnail 2">
-                </button>
-                </button>
-            </div>
-        </section>
-        </div>
+
             <div class="product_info">
                 <h2>PORTABLE BIDET</h2>
                 <p>Product details go here.</p>
                 <p>Free shipping in Europe</p>
-                <button href="#" class="buy_button">Buy Now</button>
+                <button class="buy_button">Buy Now</button>
             </div>
+        </section> 
+        </div>
+        <section class="reviews" id="reviews">
+                   <figure>            
+           <h3><cite>Claire</cite></h3>
+           <img src="5stars.png" alt="5 stars">
+           <figcaption>
+           <blockquote>
+               <p>I really benefit from this product, every single day</p>
+           </blockquote>
+           </figcaption>
+       </figure>
         </section>
 
-   
+        <section class="kontakt" id="kontakt">
+            <form action="#" method="POST" class="my-form">
+            <label for="name">Ihr Name</label>
+            <input type="text" name="Name" id="name" required>
+            <label for="email">Ihre E-Mail-Adresse</label>
+            <input type="email" name="Email" id="email" required>
+            <label for="message">Was möchten Sie uns mitteilen?</label>
+            <textarea name="Nachricht" id="message" cols="30" rows="6"></textarea>
+            <div class="btns-row">
+                <button type="submit">Formular absenden</button>
+            </div>
+            </form>
         </section>
     </main>
 
