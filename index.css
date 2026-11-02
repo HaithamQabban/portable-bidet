@@ -1,3 +1,7 @@
+:root {
+    --navbar-height: 3.5rem;
+}
+
 .hero_title {
     text-align: center;
     font-family: 'Manrope', sans-serif;
@@ -19,6 +23,7 @@ body, html {
 .hero_img {
     display: flex;
     justify-content: center;
+    color: #12304A;
 }
 .hero_img img {
     max-width: 80%;
@@ -31,12 +36,13 @@ html {
     scroll-behavior: smooth;
 }
 
-.hero,
-.product {
-    min-height: 100svh;
+#product,
+#kontakt {
+    scroll-margin-top: var(--navbar-height);
 }
 .product {
     display: grid;
+    min-height: calc(100svh - var(--navbar-height));
     width: min(96vw, 1800px);
     box-sizing: border-box;
     grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
@@ -121,7 +127,7 @@ html {
 .slider_track img {
     flex: 0 0 100%;
     width: 100%;
-    height: clamp(18rem, 58vh, 52rem);
+    height: min(58svh, 52rem, calc(100svh - var(--navbar-height) - 2 * clamp(2rem, 4vw, 5rem)));
     object-fit: contain;
     scroll-snap-align: center;
 }
@@ -150,7 +156,7 @@ html {
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: #12304A80;
+  background-color: #12304A;
 }
 
 .kontakt {
@@ -180,11 +186,35 @@ html {
     display: flex;
     justify-content: flex-end;
 }
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.navbar {
+    line-height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    background-color: #12304A;
+    padding: 1rem 0;
+    flex-direction: row;
+}
+.nav-elements {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.nav-elements a {
+    color: white;
+    text-decoration: none;
+}
 
 
 @media (max-width: 600px) {
     .hero_title {
-        font-size: 2em;
+        font-size: 4em;
     }
     .hero_img img {
         width: 90vw;
@@ -198,6 +228,18 @@ html {
 
     .product_info {
         text-align: center;
+    }
+
+    .product_info h2 {
+        margin: 0 0 0.75rem;
+    }
+
+    .product_info p {
+        margin: 0.75rem 0;
+    }
+
+    .slider_track img {
+        height: clamp(6rem, calc(100svh - var(--navbar-height) - 20rem), 32rem);
     }
 
     .buy_button {
